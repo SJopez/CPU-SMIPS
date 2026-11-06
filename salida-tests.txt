@@ -1,0 +1,11 @@
+Ejecutando 8 programas en la placa...
+OK    tests/t_aritmetica.asm  (4998 ciclos)
+OK    tests/t_desplazamientos.asm  (4548 ciclos)
+OK    tests/t_inmediatos.asm  (7290 ciclos)
+OK    tests/t_llamadas.asm  (5694 ciclos)
+OK    tests/t_mem_byte.asm  (6072 ciclos)
+OK    tests/t_mem_palabra.asm  (3000 ciclos)
+OK    tests/t_saltos.asm  (3384 ciclos)
+OK    tests/t_syscall_zero.asm  (3252 ciclos)
+
+8/8 correctos
