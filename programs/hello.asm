@@ -1,6 +1,6 @@
 # Imprime "Hola, S-MIPS" con syscall 11 (caracter) y termina con syscall 10.
         .data
-msg:    .asciiz "Adan pollazo"
+msg:    .asciiz "Hola, S-MIPS"
 
         .text
 main:   la   $s0, msg
