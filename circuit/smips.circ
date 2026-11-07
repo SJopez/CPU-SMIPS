@@ -1307,7 +1307,7 @@
       <a name="text">A -&gt; En SLL/SRL, el shamt entra por A[4:0]
 B -&gt; En SLL/SRL, es el valor a desplazar</a>
     </comp>
-    <comp lib="7" loc="(731,78)" name="Text">
+    <comp lib="7" loc="(730,75)" name="Text">
       <a name="font" val="SansSerif bold 36"/>
       <a name="text" val="Arithmetic Logic Unit (ALU)"/>
     </comp>
@@ -6059,11 +6059,11 @@ B -&gt; En SLL/SRL, es el valor a desplazar</a>
       <a name="inputs" val="6"/>
     </comp>
     <comp lib="1" loc="(860,1090)" name="AND Gate"/>
-    <comp lib="7" loc="(896,68)" name="Text">
+    <comp lib="7" loc="(895,65)" name="Text">
       <a name="font" val="SansSerif bold 36"/>
       <a name="text" val="Final Flags"/>
     </comp>
-    <comp lib="7" loc="(919,108)" name="Text">
+    <comp lib="7" loc="(915,105)" name="Text">
       <a name="text" val="Clases, ALUOP, EXTOP, BYTE y SIGNED por ORs. ILLEGAL = OP_ILLEGAL AND R_ILLEGAL (las dos ramas no reconocen la instrucción)."/>
     </comp>
     <wire from="(1000,470)" to="(1000,490)"/>
@@ -6764,7 +6764,7 @@ B -&gt; En SLL/SRL, es el valor a desplazar</a>
     <comp lib="0" loc="(1850,690)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
-      <a name="label" val="V0_o11"/>
+      <a name="label" val="V0_11"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="0" loc="(1890,270)" name="Tunnel">
@@ -6912,6 +6912,10 @@ B -&gt; En SLL/SRL, es el valor a desplazar</a>
     <comp lib="0" loc="(610,1250)" name="Tunnel">
       <a name="label" val="EXTOP"/>
       <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(630,1060)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(640,1000)" name="Tunnel">
       <a name="facing" val="east"/>
@@ -7315,11 +7319,14 @@ B -&gt; En SLL/SRL, es el valor a desplazar</a>
     <wire from="(510,1310)" to="(510,1320)"/>
     <wire from="(510,1310)" to="(520,1310)"/>
     <wire from="(590,1250)" to="(610,1250)"/>
+    <wire from="(630,1060)" to="(650,1060)"/>
     <wire from="(640,1000)" to="(650,1000)"/>
     <wire from="(640,1030)" to="(680,1030)"/>
     <wire from="(640,970)" to="(660,970)"/>
     <wire from="(650,1000)" to="(650,1020)"/>
     <wire from="(650,1020)" to="(680,1020)"/>
+    <wire from="(650,1040)" to="(650,1060)"/>
+    <wire from="(650,1040)" to="(680,1040)"/>
     <wire from="(660,1010)" to="(680,1010)"/>
     <wire from="(660,970)" to="(660,1010)"/>
     <wire from="(700,1050)" to="(700,1070)"/>
@@ -7604,7 +7611,7 @@ B -&gt; En SLL/SRL, es el valor a desplazar</a>
       <a name="label" val="PC_REG"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="7" loc="(369,168)" name="Text">
+    <comp lib="7" loc="(365,165)" name="Text">
       <a name="font" val="SansSerif bold 24"/>
       <a name="text" val="INPUTS"/>
     </comp>
@@ -9603,7 +9610,7 @@ B -&gt; En SLL/SRL, es el valor a desplazar</a>
       <a name="font" val="SansSerif bolditalic 16"/>
       <a name="text" val="Instruction Decoder Flags"/>
     </comp>
-    <comp lib="7" loc="(806,291)" name="Text">
+    <comp lib="7" loc="(805,290)" name="Text">
       <a name="text">S0 -&gt; FETCH
 S1 -&gt; DECODE
 S2 -&gt; EXEC
