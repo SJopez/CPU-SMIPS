@@ -1,19 +1,15 @@
-# Ordenamiento burbuja de 10 enteros (con negativos) por el TTY.
-# Imprime el arreglo antes y despues de ordenar, de menor a mayor.
-# Solo usa instrucciones de la tabla 3. Salida: syscall 11.
-
 .data
 arr: .word 5, -3, 12, 0, -8, 7, 7, 100, -50, 1
 
 .text
 main:
     la   $s0, arr
-    li   $s1, 10             # n
-    jal  print_array         # antes
-    addi $s2, $s1, -1        # i = n-1
+    li   $s1, 10
+    jal  print_array
+    addi $s2, $s1, -1
 b_out:
     beq  $s2, $zero, b_done
-    li   $s3, 0              # j
+    li   $s3, 0
 b_in:
     slt  $t0, $s3, $s2
     beq  $t0, $zero, b_onext
@@ -32,7 +28,7 @@ b_onext:
     addi $s2, $s2, -1
     j    b_out
 b_done:
-    jal  print_array         # despues
+    jal  print_array
     li   $v0, 10
     syscall
 
@@ -57,19 +53,17 @@ pa_end:
     li   $v0, 11
     syscall
     jr   $s7
-
-# print_int: imprime $a0 en decimal (-999..999) sin ceros a la izquierda
 print_int:
     slt  $t0, $a0, $zero
     beq  $t0, $zero, pi_pos
     move $t9, $a0
-    li   $a0, 45             # '-'
+    li   $a0, 45
     li   $v0, 11
     syscall
     sub  $a0, $zero, $t9
 pi_pos:
     move $t1, $a0
-    li   $t2, 0              # centenas
+    li   $t2, 0
 pi_h:
     slti $t3, $t1, 100
     bne  $t3, $zero, pi_hd
@@ -77,7 +71,7 @@ pi_h:
     addi $t2, $t2, 1
     j    pi_h
 pi_hd:
-    li   $t4, 0              # decenas
+    li   $t4, 0
 pi_t:
     slti $t3, $t1, 10
     bne  $t3, $zero, pi_td

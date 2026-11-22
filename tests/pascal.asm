@@ -1,7 +1,3 @@
-# Triangulo de Pascal (8 filas) por el TTY. Cada fila se guarda en memoria y se
-# actualiza en el sitio de derecha a izquierda: row[j] = row[j] + row[j-1].
-# Solo usa instrucciones de la tabla 3 (sin mul/div). Salida: syscall 11.
-
 .data
 row: .space 40               # 10 palabras (la fila mas larga usa 8)
 
